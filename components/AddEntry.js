@@ -131,6 +131,7 @@ class AddEntry extends Component {
                     value={value}
                     onIncrement={() => this.increment(key)}
                     onDecrement={() => this.decrement(key)}
+                    {...rest}
                   />
               }
             </View>
