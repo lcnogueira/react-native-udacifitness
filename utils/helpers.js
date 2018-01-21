@@ -160,6 +160,6 @@ export function timeToString(time = Date.now()) {
 
 export function getDailyRemainderValue(){
   return{
-    today: "Dont't forget to log your data today"
+    today: "👋 Dont't forget to log your data today"
   }
 };
