@@ -8,6 +8,7 @@ import History from './components/History';
 import { TabNavigator } from 'react-navigation';
 import { purple, white } from './utils/colors';
 import { FontAewsome, Ionicons } from '@expo/vector-icons';
+import UdaciStatusBar from './components/UdaciStatusBar';
 
 const Tabs = TabNavigator({
   History: {
@@ -49,6 +50,7 @@ export default class App extends React.Component {
     return (
       <Provider store={createStore(reducer)}>
         <View style={{flex: 1}}>
+          <UdaciStatusBar backgroundColor={purple} barStyle='light-content' />
           <Tabs />
         </View>
       </Provider>
