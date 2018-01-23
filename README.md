@@ -1,6 +1,6 @@
 # Udacifitness
 
-This project is the exercise of the third module of the [Udacity's Redux course](https://br.udacity.com/course/react-nanodegree--nd019). **I did not create this project from scratch. The instructor did it.**
+This project is the exercise of the third module of the [Udacity's React course](https://br.udacity.com/course/react-nanodegree--nd019). **I did not create this project from scratch. The instructor did it.**
 
 ## How to start the app
 
