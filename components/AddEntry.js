@@ -10,6 +10,7 @@ import { submitEntry, removeEntry } from '../utils/api';
 import { connect } from 'react-redux';
 import { addEntry } from '../actions';
 import { white, purple } from '../utils/colors';
+import { NagivationActions, NavigationActions } from 'react-navigation';
 
 SubmitBtn = ({ onPress }) => (
     <TouchableOpacity 
@@ -73,7 +74,7 @@ class AddEntry extends Component {
       eat: 0,
     }));
 
-    //Navigate to home
+    this.toHome();
 
     submitEntry( { key, entry });
 
@@ -88,9 +89,14 @@ class AddEntry extends Component {
       [key]: getDailyRemainderValue(),
     })));
 
-    //Route to Home
+    this.toHome();
 
     removeEntry(key);
+  }
+
+  toHome = () => {
+    this.props.navigation.dispatch(NavigationActions.back({key: 'AddEntry'}));
+    // this.props.navigation.goBack();
   }
 
   render(){
