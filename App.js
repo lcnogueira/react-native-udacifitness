@@ -10,6 +10,7 @@ import { purple, white } from './utils/colors';
 import { FontAewsome, Ionicons } from '@expo/vector-icons';
 import UdaciStatusBar from './components/UdaciStatusBar';
 import EntryDetail from './components/EntryDetail';
+import Live from './components/Live';
 
 const Tabs = TabNavigator({
   History: {
@@ -24,6 +25,13 @@ const Tabs = TabNavigator({
     navigationOptions: {
       tabBarLabel: 'Add Entry',
       tabBarIcon: ({ tintColor }) => <FontAewsome name='plus-square' size={30} color={tintColor} />
+    }
+  },
+  Live: {
+    screen: Live,
+    navigationOptions: {
+      tabBarLabel: 'Live',
+      tabBarIcon: ({ tintColor }) => <Ionicons name='ios-speedometer' size={30} color={tintColor} />
     }
   }
 },{
