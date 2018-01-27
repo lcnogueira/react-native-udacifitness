@@ -11,6 +11,7 @@ import { FontAewsome, Ionicons } from '@expo/vector-icons';
 import UdaciStatusBar from './components/UdaciStatusBar';
 import EntryDetail from './components/EntryDetail';
 import Live from './components/Live';
+import { setLocalNotification } from './utils/helpers';
 
 const Tabs = TabNavigator({
   History: {
@@ -70,6 +71,9 @@ const MainNavigator = StackNavigator({
 });
 
 export default class App extends React.Component {
+   componentDidMount(){
+    setLocalNotification();
+  }
   render() {
     return (
       <Provider store={createStore(reducer)}>
